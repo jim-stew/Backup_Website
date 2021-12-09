@@ -1,15 +1,17 @@
 ## Welcome to My Page.
 
 
-# Header 1
-## Header 2
-### Header 3
+# Header 1 goes here.
 
 - Bulleted
 - List
+- Example
+- Here
 
 1. Numbered
 2. List
+3. Example
+4. Here
 
 **Bold** and _Italic_ and `Code` text
 
