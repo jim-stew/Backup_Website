@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortune Cookie</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #fffbe6;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #fortune {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🥠 Your Fortune Cookie</h1>
+  <button onclick="showFortune()">Crack Cookie</button>
+  <div id="fortune"></div>
+
+  <script>
+    const fortunes = [
+      "You will find a bushel of money.",
+      "Now is the time to try something new.",
+      "A thrilling time is in your near future.",
+      "You will soon receive good news.",
+      "Your smile is a messenger of your good will.",
+      "Don't worry — the best is yet to come.",
+      "Your creativity will inspire others today.",
+    ];
+
+    function showFortune() {
+      const randomIndex = Math.floor(Math.random() * fortunes.length);
+      document.getElementById("fortune").textContent = fortunes[randomIndex];
+    }
+  </script>
+</body>
+</html>
 <h1> Hell-oh World! <\h1>
