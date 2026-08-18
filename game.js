@@ -36,7 +36,7 @@ function startGame() {
   }
 }
 
- function nextSequence() {
+function nextSequence() {
   userClickedPattern = [];
   level++;
   document.getElementById("level-title").innerText = "Level " + level;
@@ -57,20 +57,6 @@ function startGame() {
       clearInterval(replayInterval);
     }
   }, 600); // 600 milliseconds delay between each flash
-}
-    
-function nextSequence() {
-  userClickedPattern = [];
-  level++;
-  document.getElementById("level-title").innerText = "Level " + level;
-  
-  const randomChosenColour = buttonColours[Math.floor(Math.random() * 4)];
-  gamePattern.push(randomChosenColour);
-  
-  setTimeout(() => {
-    animatePress(randomChosenColour);
-    playSound(randomChosenColour);
-  }, 500);
 }
 
 function handleInput(color) {
