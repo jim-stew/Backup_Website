@@ -1,6 +1,22 @@
-Simon Game
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="level-title">Press Start to Play</h1>
+  <button class="start-btn" onclick="startGame()">Start Game</button>
+  <button class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
   
+  <div class="game-board">
+    <div class="btn" id="green" onclick="handleInput('green')"></div>
+    <div class="btn" id="red" onclick="handleInput('red')"></div>
+    <div class="btn" id="yellow" onclick="handleInput('yellow')"></div>
+    <div class="btn" id="blue" onclick="handleInput('blue')"></div>
+  </div>
 
-  Press Start to Play
-  Start Game
-  Back to Home
+  <script src="game.js"></script>
+</body>
+</html>
