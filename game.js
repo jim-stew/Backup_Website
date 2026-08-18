@@ -32,6 +32,10 @@ function startGame() {
     gamePattern = [];
     started = true;
     document.querySelector(".start-btn").style.display = "none";
+    nextSequence();
+  }
+}
+
  function nextSequence() {
   userClickedPattern = [];
   level++;
