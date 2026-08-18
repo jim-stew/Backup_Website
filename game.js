@@ -32,10 +32,29 @@ function startGame() {
     gamePattern = [];
     started = true;
     document.querySelector(".start-btn").style.display = "none";
-    nextSequence();
-  }
+ function nextSequence() {
+  userClickedPattern = [];
+  level++;
+  document.getElementById("level-title").innerText = "Level " + level;
+  
+  // Choose the next random color and add it to the pattern
+  const randomChosenColour = buttonColours[Math.floor(Math.random() * 4)];
+  gamePattern.push(randomChosenColour);
+  
+  // Replay the entire sequence from the beginning
+  let i = 0;
+  const replayInterval = setInterval(() => {
+    animatePress(gamePattern[i]);
+    playSound(gamePattern[i]);
+    i++;
+    
+    // Stop the loop once the whole sequence has played
+    if (i >= gamePattern.length) {
+      clearInterval(replayInterval);
+    }
+  }, 600); // 600 milliseconds delay between each flash
 }
-
+    
 function nextSequence() {
   userClickedPattern = [];
   level++;
